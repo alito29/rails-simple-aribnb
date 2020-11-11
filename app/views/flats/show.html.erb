@@ -1,0 +1,20 @@
+<div class="informations">
+  <div class = "card-title">
+  <h1><%=@flat.name%></h1>
+  <p><%=@flat.address%></p>
+  </div>
+  <div class = "description">
+    <h5>A bit more about this flat...</h5>
+    <p><%= @flat.description%></p>
+  </div>
+  <div class = "details">
+    <p>Number of guests:<%=@flat.number_of_guests%></p>
+    <p>Price : <%= @flat.price_per_night %> </p>
+  </div>
+
+  <%= link_to 'Go back to flats', flats_path %>
+  <%= link_to 'Edit the flat', edit_flat_path(@flat) %>
+  <%= link_to 'Delete the flat', flat_path(@flat), method: :delete, data: {confirm: "Are you sure?"} %>
+
+</div>
+

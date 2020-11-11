@@ -4,12 +4,17 @@
     <title>RailsSimpleAribnb</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <div class = 'd-flex justify-content-between '>
+      <h5>Simple Airbnb</h5>
+      <%= link_to 'Add Flat', new_flat_path %>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>

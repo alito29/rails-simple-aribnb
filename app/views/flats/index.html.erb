@@ -1,0 +1,23 @@
+
+
+<h1>All available flats <%= @flats.count%> </h1>
+
+<div class="d-flex flex-wrap justify-content-around">
+  <% @flats.each do |flat| %>
+   <div >
+  <div class="card">
+    <div class="card-body">
+    <h5 class="card-title"><%= flat.name%></h5>
+    <p class="card-text"><%= flat.address%></p>
+    <div>
+    <%= link_to 'Check details', flat_path(flat), class: "btn btn-primary" %>
+    <%= link_to 'Delete the flat', class: "btn btn-primary", method: :delete, data: {confirm: "Are you sure?"} %>
+    </div>
+    </div>
+  </div>
+  </div>
+
+  <% end %>
+</div>
+
+
